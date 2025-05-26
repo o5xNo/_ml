@@ -26,4 +26,3 @@ for i in range(overtimes):
 
 print(f"最低點在x={x:.4f},y={y:.4f},z={z:.4f}")
 print(f"最小值f= {f(x, y, z):.4f}")
-x=4
