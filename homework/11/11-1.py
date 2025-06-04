@@ -28,7 +28,7 @@ model.fit(X_train_scaled, y_train)
 y_pred = model.predict(X_test_scaled)
 
 # 評估結果
-print("🔍 模型：Logistic Regression")
+print("模型：Logistic Regression")
 print("準確率：", accuracy_score(y_test, y_pred))
 print("分類報告：\n", classification_report(y_test, y_pred))
 
@@ -39,3 +39,5 @@ plt.title("Logistic Regression 的混淆矩陣")
 plt.xlabel("預測值")
 plt.ylabel("真實值")
 plt.show()
+
+#https://ithelp.ithome.com.tw/m/articles/10269006

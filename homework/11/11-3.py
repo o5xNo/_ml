@@ -39,3 +39,5 @@ plt.title("KNN 的混淆矩陣")
 plt.xlabel("預測值")
 plt.ylabel("真實值")
 plt.show()
+
+#https://medium.com/@jason8410271027/%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98-k%E8%BF%91%E9%84%B0%E6%BC%94%E7%AE%97%E6%B3%95-%E7%90%86%E8%AB%96-python%E5%AF%A6%E4%BD%9C-73c9bc9251c8

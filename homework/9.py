@@ -7,8 +7,8 @@ matplotlib.rcParams['font.family'] = 'Microsoft JhengHei'  # Windows 微軟正�
 
 # 產生假資料
 np.random.seed(0)
-X = 2 * np.random.rand(100, 1)  # 100 個隨機點，範圍 0~2
-y = 4 + 3 * X + np.random.randn(100, 1)  # y = 4 + 3X + 雜訊
+X = 2 * np.random.rand(100, 1)
+y = 4 + 3 * X + np.random.randn(100, 1)
 
 # 建立線性回歸模型並訓練
 model = LinearRegression()

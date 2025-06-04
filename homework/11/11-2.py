@@ -28,7 +28,7 @@ model.fit(X_train_scaled, y_train)
 y_pred = model.predict(X_test_scaled)
 
 # 評估結果
-print("🔍 模型：Random Forest")
+print("模型：Random Forest")
 print("準確率：", accuracy_score(y_test, y_pred))
 print("分類報告：\n", classification_report(y_test, y_pred))
 
@@ -39,3 +39,6 @@ plt.title("Random Forest 的混淆矩陣")
 plt.xlabel("預測值")
 plt.ylabel("真實值")
 plt.show()
+
+# https://medium.com/chung-yi/ml%E5%85%A5%E9%96%80-%E5%8D%81%E5%85%AD-%E6%B1%BA%E7%AD%96%E6%A8%B9-decision-tree-59e5fb6a0f56 決策樹
+# https://medium.com/chung-yi/ml%E5%85%A5%E9%96%80-%E5%8D%81%E4%B8%83-%E9%9A%A8%E6%A9%9F%E6%A3%AE%E6%9E%97-random-forest-6afc24871857 隨機森林

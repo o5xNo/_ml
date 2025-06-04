@@ -16,7 +16,6 @@ def translate_chinese_to_english(text, model="gemma:2b"):
     else:
         return f"錯誤：無法連線至 Ollama（HTTP {response.status_code}）"
 
-# 範例使用
 chinese_input = input("請輸入中文：")
 english_output = translate_chinese_to_english(chinese_input)
 print("翻譯結果：", english_output)

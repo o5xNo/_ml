@@ -44,7 +44,7 @@ def sigmoid_grad(x):
     return s * (1 - s)
 
 def predict(X, W, b):
-    return sigmoid(X @ W + b)
+    return sigmoid(X @ W + b) #X @ W：做矩陣乘法（形狀：(10,7) @ (7,4) → (10,4)）
 
 def mse_loss(y_pred, y_true):
     return np.mean((y_pred - y_true) ** 2)
@@ -57,15 +57,15 @@ for epoch in range(epochs):
     y_pred = sigmoid(z)
     loss = mse_loss(y_pred, Y)
 
-    grad_y = 2 * (y_pred - Y) / Y.shape[0]
-    grad_z = grad_y * sigmoid_grad(z)
+    grad_y = 2 * (y_pred - Y) / Y.shape[0]  #MSE的導數部分（dL/dy)
+    grad_z = grad_y * sigmoid_grad(z) #鏈式法則：[dL/dz=(dL/dy)*(dy/dx)]
     grad_W = X.T @ grad_z
     grad_b = np.sum(grad_z, axis=0, keepdims=True)
 
     W -= lr * grad_W
     b -= lr * grad_b
 
-# 預測並四捨五入
+# 這個函數把 sigmoid 輸出轉成整數（0 或 1），對應數字的 4-bit 二進位。
 def binary_predict(X, W, b):
     return np.round(predict(X, W, b)).astype(int)
 
