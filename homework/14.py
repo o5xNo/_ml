@@ -28,7 +28,6 @@ for episode in range(10):  # 執行 10 回合
             action = 0
         '''
 
-
         observation, reward, terminated, truncated, info = env.step(action) #terminated：布林值，表示是否達到終止條件（比如遊戲輸贏、失敗等）。truncated：布林值，表示是否因為時間限制或其他外部條件而提前結束。
         steps += 1
 
