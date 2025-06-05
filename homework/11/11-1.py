@@ -40,4 +40,4 @@ plt.xlabel("預測值")
 plt.ylabel("真實值")
 plt.show()
 
-#https://ithelp.ithome.com.tw/m/articles/10269006
+# https://ithelp.ithome.com.tw/m/articles/10269006
