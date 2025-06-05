@@ -5,18 +5,21 @@ env = gym.make("CartPole-v1", render_mode="human")
 
 total_steps = 0
 
-for episode in range(10):  # 執行 10 回合
-    observation, info = env.reset(seed=episode)  # 每回合用不同 seed
+for episode in range(10):
+    observation, info = env.reset(seed=episode)
     steps = 0
     done = False
 
     while not done:
         env.render()
-        time.sleep(0.01)
+        time.sleep(0.0001)
 
         angle = observation[2] #位置、速度、擺錘的角度、角速度
-        action = 1 if angle > 0 else 0 # 根據角度決定動作：如果角度大於0，動作為1(推向右邊)，否則為0(推向左邊)。向右:負角度
-
+        
+        if angle > 0: # 根據角度決定動作：如果角度大於0，動作為1(推向右邊)，否則為0(推向左邊)。向右:負角度 向左:正角度
+            action = 1
+        else:
+            action = 0 
         '''
         angle = observation[2]
         angular_velocity = observation[3]
